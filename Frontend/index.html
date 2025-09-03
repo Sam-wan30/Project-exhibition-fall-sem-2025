@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Card Fraud Detection</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/yourfontawesomekit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color:#0f4c75;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">FraudShield</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="#why">Why</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#dataset">Dataset</a></li>
+          <li class="nav-item"><a class="nav-link" href="#results">Results</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Front Page -->
+  <header class="hero text-light text-center d-flex align-items-center">
+    <div class="overlay"></div>
+    <div class="container position-relative">
+      <h1 class="fw-bold display-3">Credit Card Fraud Detection</h1>
+      <p class="lead fs-4 mt-3">Machine Learning (Random Forest + SMOTE) for Real-Time Fraud Prevention</p>
+      <a href="#overview" class="btn btn-lg btn-warning mt-4 fw-bold">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Overview -->
+  <section id="overview" class="py-5 text-center">
+    <div class="container">
+      <h2 class="section-title">📌 Project Overview</h2>
+      <div class="row g-4 mt-3">
+        <div class="col-md-4">
+          <div class="card square-card shadow p-3">
+            <h5 class="card-heading">Problem</h5>
+            <p>Global rise of credit card fraud demands robust ML-based solutions.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card square-card shadow p-3">
+            <h5 class="card-heading">Goal</h5>
+            <p>Build a fraud detection system that works in real time with high precision and recall.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card square-card shadow p-3">
+            <h5 class="card-heading">Research Question</h5>
+            <p>Which machine learning model is most effective for detecting fraudulent transactions?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Fraud Detection -->
+  <section id="why" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center">💳 Why Fraud Detection?</h2>
+      <div class="row g-4 mt-3">
+        <div class="col-md-6"><div class="card square-card shadow p-3">⚠️ Global losses projected $43B by 2026.</div></div>
+        <div class="col-md-6"><div class="card square-card shadow p-3">🔍 Fraud < 0.5% but highly costly.</div></div>
+        <div class="col-md-6"><div class="card square-card shadow p-3">⚡ Real-time detection is critical.</div></div>
+        <div class="col-md-6"><div class="card square-card shadow p-3">🤖 Models must handle extreme imbalance.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-5 text-light" style="background-color:#0f4c75;">
+    <div class="container text-center">
+      <h2 class="section-title">⚡ Key Features</h2>
+      <div class="row g-4 mt-3">
+        <div class="col-md-4">
+          <div class="card square-card shadow h-100">
+            <div class="card-body">
+              <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+              <h5 class="card-heading">High Precision</h5>
+              <p>87% precision ensures flagged frauds are truly fraudulent.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card square-card shadow h-100">
+            <div class="card-body">
+              <i class="fas fa-bolt fa-3x text-warning mb-3"></i>
+              <h5 class="card-heading">Real-Time Detection</h5>
+              <p>Blocks fraud instantly while processing thousands of transactions.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card square-card shadow h-100">
+            <div class="card-body">
+              <i class="fas fa-balance-scale fa-3x text-primary mb-3"></i>
+              <h5 class="card-heading">Balanced Data</h5>
+              <p>SMOTE improves recall (79%) by balancing minority fraud cases.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dataset -->
+  <section id="dataset" class="py-5">
+    <div class="container text-center">
+      <h2 class="section-title">📊 Dataset Overview</h2>
+      <div class="row g-4 mt-3">
+        <div class="col-md-3"><div class="card square-card shadow p-3"><h5 class="card-heading">V1–V28</h5>PCA-based features capturing patterns.</div></div>
+        <div class="col-md-3"><div class="card square-card shadow p-3"><h5 class="card-heading">Time</h5>Seconds elapsed since first transaction.</div></div>
+        <div class="col-md-3"><div class="card square-card shadow p-3"><h5 class="card-heading">Amount</h5>Transaction value for each record.</div></div>
+        <div class="col-md-3"><div class="card square-card shadow p-3"><h5 class="card-heading">Class</h5>1 = Fraud, 0 = Normal.</div></div>
+      </div>
+      <p class="mt-3">Dataset Source: <a href="https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud" target="_blank">Kaggle Credit Card Fraud Dataset</a></p>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="results" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="section-title">📈 Results</h2>
+      <div class="row g-4 mt-3">
+        <div class="col-md-4">
+          <div class="card square-card shadow p-4">
+            <h5 class="card-heading">Precision</h5>
+            <p class="fs-4 text-success">87%</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card square-card shadow p-4">
+            <h5 class="card-heading">Recall</h5>
+            <p class="fs-4 text-warning">79%</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card square-card shadow p-4">
+            <h5 class="card-heading">AUPRC</h5>
+            <p class="fs-4 text-primary">0.83</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="py-5 text-center" style="background-color:#1a1a2e; color:#fff;">
+    <div class="container">
+      <h2 class="section-title">👥 Our Team</h2>
+      <div class="row justify-content-center g-3 mt-3">
+        <div class="col-md-2"><div class="card team-card">Utkarsh</div></div>
+        <div class="col-md-2"><div class="card team-card">Nikhil</div></div>
+        <div class="col-md-2"><div class="card team-card">Mokshit</div></div>
+        <div class="col-md-2"><div class="card team-card">Samiksha</div></div>
+        <div class="col-md-2"><div class="card team-card">Medha</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3">
+    <p class="mb-0">&copy; 2025 Group 8 | Credit Card Fraud Detection</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
